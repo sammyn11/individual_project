@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import json
 
 class Student:
@@ -7,12 +8,12 @@ class Student:
         self.courses_registered = []
         self.GPA = 0.0
 
-    
+
     def calculate_GPA(self):
         if not self.courses_registered:
             return self.GPA
         total_gpa = 0.0
-        for course_dict in self.courses_registered: 
+        for course_dict in self.courses_registered:
             for grade in course_dict.values():
                 gpa = grade * 4 / 100
                 total_gpa += gpa
@@ -22,13 +23,13 @@ class Student:
      # def calculate_GPA(self):
     # if not self.courses_registered:
     #     return self.GPA
-    
+
     # total_gpa = 0.0
     # for course_dict in self.courses_registered:
     #     for grade in course_dict.values():
-    #         gpa = grade * 4 / 100  
+    #         gpa = grade * 4 / 100
     #         total_gpa += gpa
-    
+
     # self.GPA = total_gpa / len(self.courses_registered)
     # return self.GPA
     # def calculate_GPA(self):
@@ -95,7 +96,7 @@ class GradeBook:
         course = Course(name, trimester, credits)
         self.course_list.append(course)
         print(f"Course {name} added successfully.")
-    
+
     def register_student_for_course(self):
         student_names = input("Enter your names: ")
         course_name = input("Enter the course name you want to register for: ")
